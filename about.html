@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-     <title> About</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Your Name</title>
     <link rel="stylesheet" href="style.css">
-</head>  
-<body>
-    <p> Click <a href="index.html"> here</a> to go the home page </p>
-    <h1 class="head1">Welcome to the about page!</h1>
+    <script src="https://unpkg.com/simplebar/dist/simplebar.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simplebar/dist/simplebar.css" />
+</head>
+<body data-simplebar>
+
+    <header>
+        <h1>Iulius Matreniuc</h1>
+        <p>Pag About Mee</p>
+    </header>
+
+    <nav>
+        <button onclick="goToPage('index.html')">Home</button>
+        <button onclick="goToPage('about.html')">About</button>
+    </nav>
+
+    <section id="About Me">
+        <h2>What You Need To Know About Me</h2>
+        <p>
+            Blessed with both an older and a younger brother, I find immense joy in the unique bonds I share with each of them. Grateful for the camaraderie and diverse perspectives they bring into my life, I cherish the special connection we share.
+        </p>
+        
+
+        <p>
+            Living solo in a dormitory is thrilling, but next year brings the exciting prospect of studying in a different country—an exhilarating twist in my life's narrative.
+        </p>
+        
+            </section>
+
+    <section id="Idols">
+        <h2>Idols</h2>
+        <p>
+            My idols, such as Lionel Messi, Lewis Hamilton, and Andrew Tate, have been a profound source of inspiration in my life. Meeting them has been a remarkable privilege, and their constant influence serves as a guiding force that fuels my aspirations.
+        </p>
+        
+    </section>
+
+    <section id="Contacts">
+        <h2>Contacts</h2>
+        <p>
+           My email : <b>iulius.matreniuc@gmail.com</b> <br>
+           My instagram: <b>iulius.matreniuc</b> <br>
+           My number : <b>068711522</b>
+        </p>
+    </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new SimpleBar(document.body);
+        });
+
+        function goToPage(page) {
+            window.location.href = page;
+        }
+
+        function goToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
 </body>
 </html>
