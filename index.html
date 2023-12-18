@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Quince Paradise</title>
+    <title>Your Name - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
-        <h1>Gutuie</h1>
+        <h1>Iulius Matreniuc</h1>
+        <p>Welcome to my spectacular personal website</p>
     </header>
-
     <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <button onclick="goToPage('index.html')">Home</button>
+        <button onclick="goToPage('about.html')">About</button>
     </nav>
 
-    <div class="container">
-        <img class="quince-image" src="https://www.finedininglovers.com/sites/g/files/xknfdk626/files/2020-11/quince_fruit%C2%A9iStock.jpg" alt="Quince Image">
-        <h2>General Info</h2>
-        <p class="p1">
-            Quinces are nature's hidden gems, delightful fruits with a captivating blend of sweet and tart flavors that
-            unfold in every bite. Their enchanting aroma fills orchards, announcing the arrival of autumn. With various
-            varieties boasting unique characteristics, quinces become versatile ingredients, lending their magic to jams,
-            preserves, compotes, and desserts.
-        </p>
-        <h2>The beauty of quinces</h2>
-        <p class="p2">
-            Beyond their culinary allure, quinces add a touch of elegance to ornamental settings. The distinctive yellow
-            or green hues of quinces paint a vibrant picture, symbolizing both nature's bounty and the artistry of
-            gastronomy. Explore the world of quinces and uncover the secrets of this amazing fruit that effortlessly
-            balances taste and beauty.
-        </p>
-        <h2>Links</h2>
-          <p><a href="recipes.html">Explore more recipes with quinces here</a></p>
-    </div>
 
-    <footer>
-        &copy; 2023 Quince Paradise. All rights reserved.
-    </footer>
+    <section id="interests">
+        <h2>Interests</h2>
+        <p>
+       
+            <p>Welcome to my world of sports passion! Whether it's strategic football plays or the excitement of Formula 1 races, I'm captivated by greatness in every moment. Join me as we explore the latest events, iconic players, and the pursuit of excellence in every game.</p>
+
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p>
+            During my leisure hours, I immerse myself in a diverse range of hobbies that bring both joy and relaxation. Whether conquering virtual fields in FIFA or strumming the strings of my guitar, each activity becomes a canvas for self-expression and a sanctuary for unwinding.
+        </p>
+    </section>
+
+    <section id="latest-projects">
+        <h2>Latest Projects</h2>
+        <div class="project">
+            <h3>Volunteering events</h3>
+            <p>Engaging in a multitude of projects has been a cornerstone of my journey, a deliberate effort to cultivate personal growth and evolve as an individual. Each endeavor serves as a stepping stone in the ongoing process of self-improvement and the relentless pursuit of personal development.</p>
+
+        </div>
+
+ 
+    </section>
+    <script>
+        function goToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+            expandSection(section);
+        }
+
+        function expandSection(targetSection) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('expanded');
+            });
+            targetSection.classList.add('expanded');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new SimpleBar(document.body);
+        });
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    
+    </script>
+
 
 </body>
-
 </html>
