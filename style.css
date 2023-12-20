@@ -166,3 +166,29 @@ section.expanded {
     opacity: 2;
     transform: scale(1);
 }
+section:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+section.expanded {
+    opacity: 2;
+    transform: scale(1);
+}
+.interests:hover{
+    transform: scale(1.05);
+}
+.hobbies:hover{
+    transform: scale(1.05);
+}
+.latest-projects:hover{
+    transform: scale(1.05);
+}
+.AboutMe:hover{
+    transform: scale(1.05);
+}
+.Idols:hover{
+    transform: scale(1.05);
+}
+.Contacts:hover{
+    transform: scale(1.05);
+}
